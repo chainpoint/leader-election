@@ -28,7 +28,7 @@ import (
     "reflect"
     "sync"
     "fmt"
-    "github.com/chainpoint/leader-election"
+    leaderelection "github.com/chainpoint/leader-election"
 )
 
 func main() {
@@ -38,7 +38,7 @@ func main() {
     myPeerNameIs := "peer"
 
     // Return array consisting of desiredNumLeaders number of peers from peerList, given an entropy string
-    result := leaderelection.ElectLeaders(peerList, desiredNumLeaders, entropy)
+    result := leaderelection.ElectLeaders(peerList, desiredNumLeaders, entropy).([]string) 
     fmt.Println(result)
     if len(result) > 0 and myPeerNameIs == result[0] {
         fmt.Println("I am leader!")
