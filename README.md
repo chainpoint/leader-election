@@ -2,8 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-GPL-blueg)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 
-This library is used by Chainpoint Core to deterministically elect a peer from a list of peers, given an identical source of entropy for all peers. This method of leader election does not require excessive peer-to-peer coordination or an odd number of peers. The election does not even need
-to take place at the same time for all peers, so long as all peers have the same peer list and entropy- this ensures similar results in case of highly asynchronous operation or network latency.
+This library is used by Chainpoint Core to deterministically elect a peer from a list of peers, given an identical source of entropy for all peers. This method of leader election does not require excessive peer-to-peer coordination or an odd number of peers. The election does not even need to take place at the same time for all peers, so long as all peers have the same peer list and entropy- this ensures similar results in case of highly asynchronous operation or network latency.
 
 ## Install
 
